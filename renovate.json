@@ -8,6 +8,11 @@
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true
+    },
+    {
+      "matchPackagePatterns": [ "typescript" ],
+      "groupName": "typescript",
+      "groupSlug": "typescript"
     }
   ]
 }
