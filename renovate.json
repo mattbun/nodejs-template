@@ -3,6 +3,7 @@
   "extends": [
     "config:base",
     "group:allNonMajor",
+    "group:nodeJs",
     ":pinAllExceptPeerDependencies",
     "schedule:monthly"
   ],
