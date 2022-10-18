@@ -8,7 +8,7 @@
     "schedule:monthly"
   ],
   "npm": {
-    "stabilityDays": 7
+    "stabilityDays": 3
   },
   "packageRules": [
     {
