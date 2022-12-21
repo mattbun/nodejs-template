@@ -8,12 +8,14 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "debug": "node --inspect-brk dist/index.js",
-    "test": "jest"
+    "test": "jest",
+    "format": "prettier -w ./src"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "@fsouza/prettierd": "^0.22.5",
     "@types/jest": "29.2.3",
     "@types/node": "18.11.9",
     "conventional-changelog-conventionalcommits": "5.0.0",
