@@ -13,10 +13,10 @@ RUN yarn build && yarn install --production --frozen-lockfile
 
 FROM node:${NODE_VERSION}-alpine AS production
 
+RUN apk add --no-cache tini
+
 WORKDIR /app
 COPY --from=build /app/node_modules/ node_modules/
 COPY --from=build /app/dist dist
-
-RUN apk add --no-cache tini
 
 ENTRYPOINT [ "/sbin/tini", "--", "node", "dist/index.js" ]
