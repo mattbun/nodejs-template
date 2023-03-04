@@ -17,4 +17,6 @@ WORKDIR /app
 COPY --from=build /app/node_modules/ node_modules/
 COPY --from=build /app/dist dist
 
-ENTRYPOINT [ "node", "dist/index.js" ]
+RUN apk add --no-cache tini
+
+ENTRYPOINT [ "/sbin/tini", "--", "node", "dist/index.js" ]
