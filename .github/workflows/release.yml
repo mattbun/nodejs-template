@@ -5,8 +5,7 @@ on:
       - main
 
 jobs:
-  release:
-    name: Release
+  semantic-release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
